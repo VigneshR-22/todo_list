@@ -14,7 +14,6 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Description cannot be empty")
     private String description;
 
     private String status;
