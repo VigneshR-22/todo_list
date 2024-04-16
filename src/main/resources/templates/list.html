@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" th:href="@{/styles.css}"> <!-- Link to your CSS file -->
+</head>
+<body>
+<header>
+    <h1>My ToDo List</h1>
+</header>
+<main>
+    <div class="content-box">
+        <section class="task-list-section">
+            <h2>Task List</h2>
+            <ul class="task-list">
+                <li th:each="task : ${tasks}">
+                    <span th:text="${task.description}"></span>
+                    <span th:text="${task.status}"></span>
+                    <!-- Display other task properties here (dueDate, priority, status) -->
+                </li>
+            </ul>
+            <a href="/tasks/add" class="add-button">Add New Task</a>
+        </section>
+    </div>
+</main>
+<footer>
+    <p>© 2024 My ToDo List App</p>
+</footer>
+</body>
+</html>
+
+
+
